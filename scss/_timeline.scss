@@ -1,4 +1,4 @@
-$timelinewidth: 500px;
+$timelinewidth: 100vw;
 $timelinerulerwidth: 3px;
 $timelineitemlogodiameter: 50px; 
 
@@ -9,7 +9,7 @@ $timelineitemlogodiameter: 50px;
     width: $timelinewidth;
     position: relative;
     padding: 2em 0;
-    margin: 2em;
+    // margin: 2em;
     list-style: none;
     // display: flex;
 }
@@ -38,10 +38,10 @@ $timelineitemlogodiameter: 50px;
     width: $timelineitemlogodiameter;
     height: $timelineitemlogodiameter;
     border-radius: calc(#{$timelineitemlogodiameter}/2);
-    left: calc((#{$timelinewidth - $timelineitemlogodiameter})/2);
-    // left: calc((#{$timelinewidth}-#{$timelineitemlogodiameter})/2);
+    // left: calc((#{$timelinewidth - $timelineitemlogodiameter})/2);
+    left: calc((#{$timelinewidth} - #{$timelineitemlogodiameter})/2);
     top: -70px;
-    
+
 }
 
 // .timeline__item--2019{
@@ -61,6 +61,7 @@ $timelineitemlogodiameter: 50px;
 
 .timeline .timeline__item--2019:before{
     content:"2019";
+    background-color: $fontcolor;
 }
 
 .timeline .timeline__item--2017:before{
@@ -81,6 +82,12 @@ $timelineitemlogodiameter: 50px;
     // display: inline-block;
     margin: 0;
     padding-bottom: 1em;
+}
+
+.timeline__content__workplace{
+    color: $fontcolor-light;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .timeline__content__description{
