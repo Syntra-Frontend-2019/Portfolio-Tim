@@ -1,0 +1,82 @@
+body {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.section--timeline {
+  margin: auto;
+}
+
+.timeline {
+  width: 500px;
+  position: relative;
+  padding: 2em 0;
+  margin: 2em;
+  list-style: none;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  width: 3px;
+  left: calc((500px+3px)/2);
+  top: 0px;
+  bottom: 120px;
+}
+
+.timeline__item:before {
+  content: "";
+  position: absolute;
+  color: white;
+  background-color: lightblue;
+  line-height: 3em;
+  width: 50px;
+  height: 50px;
+  border-radius: calc(50px/2);
+  left: calc((450px)/2);
+  top: -70px;
+}
+
+.timeline__item {
+  position: relative;
+  width: 100%;
+  border: 2px solid lightblue;
+  margin: 3em 0 6em 0;
+  padding: 2em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.timeline .timeline__item--2019:before {
+  content: "2019";
+}
+
+.timeline .timeline__item--2017:before {
+  content: "2017";
+}
+
+.timeline .timeline__item--2015:before {
+  content: "2015";
+}
+
+.timeline .timeline__item--2013:before {
+  content: "2013";
+}
+
+.timeline__content__title, .timeline__content__workplace {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.timeline__content__description {
+  text-align: left;
+}
+
+/*# sourceMappingURL=style.css.map */
