@@ -3,6 +3,10 @@ body {
   color: #0c0c4d;
 }
 
+.la {
+  font-size: 50px;
+}
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -13,14 +17,76 @@ body {
   box-sizing: border-box;
 }
 
-.section--timeline {
-  margin: auto;
+.wrapper {
+  margin: 2rem auto;
+}
+
+.title--block {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.title--inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+.title--inline h1 {
+  margin: 0 1rem;
+}
+.title--inline i {
+  padding: 10px;
+  font-size: 25px;
+  border: 2px solid #aaaaaa57;
+  border-radius: 1em;
+}
+
+.title--inline:after {
+  content: "";
+  position: relative;
+  padding: 1px calc(50vw/2) 0 0;
+  border-bottom: 2px solid black;
+}
+
+.section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.avatar {
+  width: 100px;
+}
+
+.worktitle {
+  font-style: italic;
+}
+
+.worktitle span {
+  color: white;
+  padding: 1em;
+  background: lightblue;
+  border-radius: 1em;
+  text-shadow: 2px 2px black;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.progress__item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .timeline {
-  width: 100vw;
+  min-width: 200px;
   position: relative;
-  padding: 2em 0;
+  padding: 2rem 0 0 0;
   list-style: none;
 }
 
@@ -29,9 +95,9 @@ body {
   position: absolute;
   background-color: grey;
   width: 3px;
-  left: calc((100vw+3px)/2);
-  top: 0px;
-  bottom: 120px;
+  left: calc(50% - (3px/2));
+  top: 20px;
+  bottom: 0;
 }
 
 .timeline__item:before {
@@ -39,11 +105,11 @@ body {
   position: absolute;
   color: white;
   background-color: lightblue;
-  line-height: 3em;
+  line-height: 50px;
   width: 50px;
   height: 50px;
   border-radius: calc(50px/2);
-  left: calc((100vw - 50px)/2);
+  left: calc(50% - (50px/2));
   top: -70px;
 }
 
@@ -51,23 +117,50 @@ body {
   position: relative;
   width: 100%;
   border: 2px solid lightblue;
-  margin: 3em 0 6em 0;
+  margin: 3rem 0 6rem 0;
   padding: 2em;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__item--first:before {
+  background-color: #0c0c4d;
+}
+
+.timeline .timeline__item--2021:before {
+  content: "2021";
+}
+
+.timeline .timeline__item--2020:before {
+  content: "2020";
+}
+
 .timeline .timeline__item--2019:before {
   content: "2019";
-  background-color: #0c0c4d;
+}
+
+.timeline .timeline__item--2018:before {
+  content: "2018";
 }
 
 .timeline .timeline__item--2017:before {
   content: "2017";
 }
 
+.timeline .timeline__item--2016:before {
+  content: "2016";
+}
+
 .timeline .timeline__item--2015:before {
   content: "2015";
+}
+
+.timeline .timeline__item--2014:before {
+  content: "2014";
 }
 
 .timeline .timeline__item--2013:before {

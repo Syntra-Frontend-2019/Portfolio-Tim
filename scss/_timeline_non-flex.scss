@@ -1,15 +1,14 @@
-$timelinewidth: 100vw;
+$timelinewidth: 50vw;
 $timelinerulerwidth: 3px;
 $timelineitemlogodiameter: 50px; 
 
-.section--timeline{
-    margin: auto;
-}
 .timeline{
-    width: $timelinewidth;
+    // margin: 2rem auto;
+    // width: $timelinewidth;
+    min-width: 200px;
     position: relative;
-    padding: 2em 0;
-    // margin: 2em;
+    padding: 2rem 0 0 0;
+    // margin: 2rem;
     list-style: none;
     // display: flex;
 }
@@ -19,9 +18,10 @@ $timelineitemlogodiameter: 50px;
     position: absolute;
     background-color: grey;
     width: 3px;
-    left: calc((#{$timelinewidth}+#{$timelinerulerwidth})/2);
-    top: 0px;
-    bottom: 120px;
+    // left: calc((#{$timelinewidth}+#{$timelinerulerwidth})/2);
+    left: calc(50% - (#{$timelinerulerwidth}/2));;
+    top: 20px;
+    bottom: 0;
     // z-index: -1;
 }
 
@@ -34,44 +34,67 @@ $timelineitemlogodiameter: 50px;
     color: white;
     // padding: 1em;
     background-color: lightblue;
-    line-height: 3em;
+    line-height: $timelineitemlogodiameter;
     width: $timelineitemlogodiameter;
     height: $timelineitemlogodiameter;
     border-radius: calc(#{$timelineitemlogodiameter}/2);
     // left: calc((#{$timelinewidth - $timelineitemlogodiameter})/2);
-    left: calc((#{$timelinewidth} - #{$timelineitemlogodiameter})/2);
+    // left: calc((#{$timelinewidth} - #{$timelineitemlogodiameter})/2);
+    left: calc(50% - (#{$timelineitemlogodiameter}/2));
     top: -70px;
-
 }
 
-// .timeline__item--2019{
-//     content:"2019";
+// .timeline__item:after{
+//     content:"";
+//     position: absolute;
+//     background-color: rgba(255,255,0,0.1);
+//     padding: 1em;
+//     top: calc(50% - 0.5em);
+//     z-index: -1;
 // }
 
 .timeline__item{
     position: relative;
     width: 100%;
     border: 2px solid lightblue;
-    margin: 3em 0 6em 0;
+    margin: 3rem 0 6rem 0;
     padding: 2em;
     text-align: center;
     background-color: rgba(255,255,255,0.8);
 }
 
+.timeline__item:last-child{
+    margin-bottom: 0;
+}
 
-.timeline .timeline__item--2019:before{
-    content:"2019";
+.timeline__item--first:before{
     background-color: $fontcolor;
 }
 
+.timeline .timeline__item--2021:before{
+    content:"2021";
+}
+.timeline .timeline__item--2020:before{
+    content:"2020";
+}
+.timeline .timeline__item--2019:before{
+    content:"2019";
+}
+.timeline .timeline__item--2018:before{
+    content:"2018";
+}
 .timeline .timeline__item--2017:before{
     content:"2017";
 }
-
+.timeline .timeline__item--2016:before{
+    content:"2016";
+}
 .timeline .timeline__item--2015:before{
     content:"2015";
 }
-
+.timeline .timeline__item--2014:before{
+    content:"2014";
+}
 .timeline .timeline__item--2013:before{
     content:"2013";
 }

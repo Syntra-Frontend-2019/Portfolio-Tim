@@ -1,0 +1,95 @@
+$timelinewidth: 100vw;
+$timelinerulerwidth: 3px;
+$timelineitemlogodiameter: 50px; 
+
+.section--timeline{
+    margin: auto;
+}
+.timeline{
+    width: $timelinewidth;
+    position: relative;
+    padding: 2em 0;
+    // margin: 2em;
+    list-style: none;
+    // display: flex;
+}
+
+.timeline:before{
+    content:"";
+    // position: absolute;
+    background-color: grey;
+    width: 3px;
+    // left: calc((#{$timelinewidth}+#{$timelinerulerwidth})/2);
+    top: 0px;
+    bottom: 120px;
+    // z-index: -1;
+}
+
+
+// Timeline Item
+
+.timeline__item:before{
+    content:"";
+    position: absolute;
+    color: white;
+    // padding: 1em;
+    background-color: lightblue;
+    line-height: 3em;
+    width: $timelineitemlogodiameter;
+    height: $timelineitemlogodiameter;
+    border-radius: calc(#{$timelineitemlogodiameter}/2);
+    // left: calc((#{$timelinewidth - $timelineitemlogodiameter})/2);
+    left: calc((#{$timelinewidth} - #{$timelineitemlogodiameter})/2);
+    top: -70px;
+
+}
+
+// .timeline__item--2019{
+//     content:"2019";
+// }
+
+.timeline__item{
+    position: relative;
+    width: 100%;
+    border: 2px solid lightblue;
+    margin: 3em 0 6em 0;
+    padding: 2em;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+}
+
+
+.timeline .timeline__item--2019:before{
+    content:"2019";
+    background-color: $fontcolor;
+}
+
+.timeline .timeline__item--2017:before{
+    content:"2017";
+}
+
+.timeline .timeline__item--2015:before{
+    content:"2015";
+}
+
+.timeline .timeline__item--2013:before{
+    content:"2013";
+}
+
+// timeline Content
+
+.timeline__content__title, .timeline__content__workplace{
+    // display: inline-block;
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+.timeline__content__workplace{
+    color: $fontcolor-light;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.timeline__content__description{
+    text-align: left;
+}

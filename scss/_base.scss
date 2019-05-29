@@ -1,3 +1,5 @@
+$collumnwidth: 50vw;
+
 body{
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +7,42 @@ body{
 }
 
 *, *:before, *:after {
-    
     box-sizing: border-box;
+}
 
+.wrapper{
+    margin: 2rem auto;
+    // width: $collumnwidth;
+}
+
+.title--block{
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.title--inline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+    h1{
+        // display: inline-block;
+        margin: 0 1rem;
+    }
+    i{
+        padding: 10px;
+        font-size: 25px;
+        border: 2px solid #aaaaaa57;
+        border-radius: 1em;
+    }
+}
+.title--inline:after{
+    content: "";
+    position: relative;
+    // bottom: 10px;
+    padding: 1px calc(#{$collumnwidth}/2) 0 0;
+    // background-color: #aaaaaa57;
+    // height: 2px;
+    // width: 10px;
+    border-bottom: 2px solid black;
 }
