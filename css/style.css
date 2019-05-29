@@ -182,4 +182,10 @@ body {
   text-align: left;
 }
 
+@media screen and (min-width: 1000px) {
+  .flex-main {
+    display: flex;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
