@@ -21,35 +21,7 @@ body {
   margin: 2rem auto;
 }
 
-.title--block {
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.title--inline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1em 0;
-}
-.title--inline h1 {
-  margin: 0 1rem;
-}
-.title--inline i {
-  padding: 10px;
-  font-size: 25px;
-  border: 2px solid #aaaaaa57;
-  border-radius: 1em;
-}
-
-.title--inline:after {
-  content: "";
-  position: relative;
-  padding: 1px calc(50vw/2) 0 0;
-  border-bottom: 2px solid black;
-}
-
-.section {
+section {
   text-align: center;
   padding: 2rem;
 }
@@ -123,6 +95,10 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.timeline__item:first-child {
+  border: 2px solid #0c0c4d;
+}
+
 .timeline__item:last-child {
   margin-bottom: 0;
 }
@@ -185,7 +161,84 @@ body {
 @media screen and (min-width: 1000px) {
   .flex-main {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
   }
+
+  .wrapper {
+    flex: 1;
+  }
+
+  .timeline:before {
+    left: calc(-10px - (3px/2));
+  }
+
+  .timeline__item:before {
+    left: calc(-10px - (50px/2) - 31.5px);
+    top: 100px;
+  }
+
+  .timeline__item {
+    margin-left: 30px;
+  }
+
+  .timeline__item:first-child .timeline__content:before {
+    background-color: #0c0c4d;
+  }
+
+  .timeline__content:before {
+    content: "";
+    position: absolute;
+    padding: 0.7em 2px;
+    background-color: lightblue;
+    transform: rotate(90deg);
+    left: -15px;
+    top: 115px;
+  }
+}
+.title--block {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.title--inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+.title--inline h1 {
+  margin: 0 1rem;
+}
+.title--inline i {
+  padding: 10px;
+  font-size: 25px;
+  border: 2px solid #aaaaaa57;
+  border-radius: 1em;
+}
+
+.title--inline:after {
+  content: "";
+  position: relative;
+  padding: 1px calc(50vw/2.5) 0 0;
+  border-bottom: 2px solid black;
+}
+
+.testimonial {
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 20px;
+  text-align: left;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+.testimonial__header {
+  display: inline-block;
+}
+.testimonial__header span {
+  padding-left: 1rem;
+  font-weight: 100;
+  font-size: small;
 }
 
 /*# sourceMappingURL=style.css.map */

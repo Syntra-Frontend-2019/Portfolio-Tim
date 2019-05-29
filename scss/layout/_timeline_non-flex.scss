@@ -1,7 +1,3 @@
-$timelinewidth: 50vw;
-$timelinerulerwidth: 3px;
-$timelineitemlogodiameter: 50px; 
-
 .timeline{
     // margin: 2rem auto;
     // width: $timelinewidth;
@@ -19,7 +15,8 @@ $timelineitemlogodiameter: 50px;
     background-color: grey;
     width: 3px;
     // left: calc((#{$timelinewidth}+#{$timelinerulerwidth})/2);
-    left: calc(50% - (#{$timelinerulerwidth}/2));;
+    // left: calc(50% - (#{$timelinerulerwidth}/2));
+    left: calc(#{$timelineposition} - (#{$timelinerulerwidth}/2));
     top: 20px;
     bottom: 0;
     // z-index: -1;
@@ -40,7 +37,7 @@ $timelineitemlogodiameter: 50px;
     border-radius: calc(#{$timelineitemlogodiameter}/2);
     // left: calc((#{$timelinewidth - $timelineitemlogodiameter})/2);
     // left: calc((#{$timelinewidth} - #{$timelineitemlogodiameter})/2);
-    left: calc(50% - (#{$timelineitemlogodiameter}/2));
+    left: calc(#{$timelineposition} - (#{$timelineitemlogodiameter}/2));
     top: -70px;
 }
 
@@ -61,6 +58,10 @@ $timelineitemlogodiameter: 50px;
     padding: 2em;
     text-align: center;
     background-color: rgba(255,255,255,0.8);
+}
+
+.timeline__item:first-child{
+    border: 2px solid $fontcolor;
 }
 
 .timeline__item:last-child{

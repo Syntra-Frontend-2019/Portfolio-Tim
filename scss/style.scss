@@ -1,7 +1,9 @@
-@import "font";
-@import "base";
-@import "section";
-@import "profile";
-@import "skills";
-@import "timeline_non-flex";
-@import "queries"
+@import "abstracts/variables";
+@import "base/typography";
+@import "base/base";
+@import "layout/profile";
+@import "layout/skills";
+@import "layout/timeline_non-flex";
+@import "layout/queries";
+@import "layout/titles";
+@import "layout/testimonials"
