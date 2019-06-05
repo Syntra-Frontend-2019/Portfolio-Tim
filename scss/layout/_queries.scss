@@ -1,5 +1,6 @@
 @media screen and (min-width: 1000px){
     $timelineposition: -10px;
+    $collumnwidth: 50%;
     body{
         // background-color: grey;
     }
@@ -12,6 +13,19 @@
     .wrapper{
         flex: 1;
     }
+    section{
+        margin: 1rem;
+    }
+
+    // Titles
+    .title--inline:after{
+        padding: 1px calc(#{$collumnwidth}/2.5) 0 0;
+        // padding: 1px calc(50vw/2.5) 0 0;
+        // border-bottom: 2px solid black;
+    
+    }
+
+    // Timeline
     .timeline:before{
         // left: initial;
         // right: calc(#{$timelineposition} - (#{$timelinerulerwidth}/2));
@@ -26,6 +40,16 @@
         // align-content: stretch;
     }
 
+    .logoWrapper{
+        text-align: left;
+        position: absolute;
+    }
+    .timelineLogo{
+        position: relative;
+        left: calc(#{$timelineposition} - (#{$timelineitemlogodiameter}/2));
+        background: white;
+        z-index: 1;
+    }
     .timeline__item:before{
         // Right Position:
         // left: initial;
@@ -35,6 +59,7 @@
         top: 100px;
     }
     .timeline__item{
+        // white-space: nowrap;
         margin-left: 30px;
         // width: 40%;
     }

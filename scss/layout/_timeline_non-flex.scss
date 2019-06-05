@@ -22,7 +22,14 @@
     // z-index: -1;
 }
 
-
+.timelineLogo{
+    // border: 1px solid $fontcolor;
+    // padding: 1rem;
+    // border-radius: 50%;
+    box-shadow: 0 0 0 0.4rem rgba(255, 255, 255, 1);
+    position: relative;
+    
+}
 // Timeline Item
 
 .timeline__item:before{

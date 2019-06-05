@@ -1,0 +1,33 @@
+.testimonial{
+    position: relative;
+    background-color:rgba($color: lightgrey, $alpha: 0.5);
+    border-radius: 20px;
+    text-align: left;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+
+    &__header{
+    display: inline-block;
+    span{
+        padding-left: 1rem;
+        font-weight: 100;
+        font-size: small;
+        }
+    }
+    // &--1:before{
+    //     content: url("../img/avatar/001-man.svg");
+    //     width: 20px;
+    //     height: 20px;
+    // }
+    .testimonial__avatar{
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        img{
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0.5rem white;
+            // object-fit: contain;
+        }
+    }
+}
