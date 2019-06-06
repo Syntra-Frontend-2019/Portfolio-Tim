@@ -277,9 +277,9 @@ section {
   box-shadow: 0 0 0 0.5rem white;
 }
 
-.section--links {
-  text-align: left;
+.section--cv {
   margin: 0 50px;
+  text-align: left;
 }
 
 .links--button {
