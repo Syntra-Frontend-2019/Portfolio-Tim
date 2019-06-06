@@ -279,7 +279,7 @@ section {
 
 .section--links {
   text-align: left;
-  margin: auto;
+  margin: 0 50px;
 }
 
 .links--button {
@@ -291,6 +291,53 @@ section {
 }
 .links--button:hover {
   background-color: rgba(122, 122, 122, 0.3);
+}
+
+.social__body {
+  text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #fe6d35;
+  color: white;
+}
+
+.fa-github {
+  background: grey;
+  color: white;
+}
+
+.fa-instagram {
+  background: #285AEB;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
